@@ -1,0 +1,491 @@
+@charset "utf-8";
+html,body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    background-color: #f0f0f0;
+}
+.flex {
+    display: flex;
+    display: -webkit-flex;
+}
+/* 页面布局 */
+.view-wrap {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+.wrapper {
+    overflow: hidden;
+}
+/* header部分 */
+.header {
+    overflow: hidden;
+    background-color: #fff;
+    
+}
+/* banner */
+.card-content {
+    padding: 0.26rem 0 0.32rem;
+}
+/* 剩余流量 */
+.hearer-inf {
+    justify-content: space-between;
+    padding: 0.35rem 0.5rem 0.23rem;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px -2px rgba(153, 153, 153, .5);
+}
+.inf-text {
+    margin-bottom: 0.1rem;
+    font-size: 0.26rem;
+    color: #333;
+}
+.inf-num {
+    font-size: 0.24rem;
+    color: #999;
+}
+.inf-num span {
+    color: #2196f3;
+}
+/* 日历 */
+.calendar {
+    padding: 0 50px;
+    font-size: 0.24rem;
+    color: #333;
+    line-height: 0.73rem;
+    justify-content: space-between;
+}
+.calendar-now {
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    align-items: center;
+}
+.icon-calendar {
+    width: 0.35rem;
+    height: 0.35rem;
+    margin-right: 0.2rem;
+    background-image: url("../images/icon-rili.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100% 100%;
+}
+/* 侧边栏 */
+.siderbar {
+    width: 20%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 5px 0 10px -5px rgba(153, 153, 153, .5);
+    z-index: 10;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.siderbar ul {
+    padding-bottom: 20px;
+}
+.content-body {
+    width: 80%;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.siderbar .icon-solid {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-image: url('../images/border.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+}
+.siderbar li .icon {
+    display: block;
+    width: 100%;
+    height: 1.28rem;
+    background-image: url('../images/icon-side.jpg');
+    background-repeat: no-repeat;
+    background-size: 14.4rem 2.56rem;
+}
+.siderbar li .icon-4g {
+    background-position: 0 0;
+}
+.siderbar li .icon-yb {
+    background-position: -1.44rem 0;
+}
+.siderbar li .icon-zc {
+    background-position: -2.88rem 0;
+}
+.siderbar li .icon-spb {
+    background-position: -4.32rem 0;
+}
+.siderbar li .icon-jyb {
+    background-position: -5.76rem 0;
+}
+.siderbar li .icon-kcb {
+    background-position: -7.2rem 0;
+}
+.siderbar li .icon-jrb {
+    background-position: -8.64rem 0;
+}
+.siderbar li .icon-dtb {
+    background-position: -10.08rem 0;
+}
+.siderbar li .icon-gmb {
+    background-position: -12.96rem 0;
+}
+.siderbar li.act .icon-4g {
+    background-position: 0 -1.28rem;
+}
+.siderbar li.act .icon-yb {
+    background-position: -1.44rem -1.28rem;
+}
+.siderbar li.act .icon-zc {
+    background-position: -2.88rem -1.28rem;
+}
+.siderbar li.act .icon-spb {
+    background-position: -4.32rem -1.28rem;
+}
+.siderbar li.act .icon-jyb {
+    background-position: -5.76rem -1.28rem;
+}
+.siderbar li.act .icon-kcb {
+    background-position: -7.2rem -1.28rem;
+}
+.siderbar li.act .icon-jrb {
+    background-position: -8.64rem -1.28rem;
+}
+.siderbar li.act .icon-dtb {
+    background-position: -10.08rem -1.28rem;
+}
+.siderbar li.act .icon-gmb {
+    background-position: -12.96rem -1.28rem;
+}
+/* 内容 */
+.item-section {
+    padding: 0 0.3rem 0.2rem;
+    text-align: center;
+    overflow: hidden;
+    background-color: #fff;
+}
+.content-item {
+    min-height: 100%;
+    background-color: #fff;
+}
+.content-bg {
+    height: 0.2rem;
+    background-color: #f0f0f0;
+}
+.item-section .title-h4 {
+    margin-top: 0.25rem;
+    margin-bottom: 0.15rem;
+    font-size: 0.32rem;
+}
+.item-section .title-tip {
+    font-size: 0.24rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+}
+.item-section-list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item-section-list li {
+    position: relative;
+    width: 2.58rem;
+    margin-bottom: 0.2rem;
+    border-radius: 0.1rem;
+    overflow: hidden;
+}
+.item-section-list li .tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0.76rem;
+    height: 0.28rem;
+    color: #fff;
+    border-radius: 0 0.1rem 0 0.1rem;
+    background-color: #f00;
+    font-size: 0.20rem;
+    text-align: center;
+    line-height: 0.28rem;
+}
+.item-section-list a {
+    display: block;
+    
+}
+.item-section-list .jj {
+    padding-top: 0.33rem;
+    padding-bottom: 0.15rem;
+    text-align: center;
+}
+.item-section-list .md {
+    padding: 0.12rem 0;
+    color: #fff;
+    font-size: 0.24rem;
+}
+.item-section-list .md .font-20 {
+    font-size: 0.2rem;
+}
+.item-section-list .md .font-18 {
+    font-size: 0.18rem;
+}
+.pack-name {
+    font-size: 0.32rem;
+}
+.pack-jj {
+    margin-top: 0.1rem;
+    font-size: 0.24rem;
+}
+.pack-name {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+}
+.pack-name .solid {
+    width: 0.3rem;
+    height: 1px;
+    background-color: #2196f3;
+}
+.pack-name .solid.l {
+    margin-right: 0.25rem;
+}
+.pack-name .solid.r {
+    margin-left: 0.25rem;
+}
+.more-a {
+    text-align: right;
+    font-size: 0.2rem;
+}
+.more-a a {
+    color: #f00;
+}
+.now-btn {
+    width: 3.0rem;
+    height: 0.7rem;
+    padding-top: 0.2rem;
+    color: #fff;
+    text-align: center;
+    margin: 0.15rem auto 0;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+/* 主题色  */
+/* 蓝色 */
+.item-section.blue .md {
+    background-color: #2196f3;
+}
+.item-section.blue .jj {
+    background-color: #e3f2fd;
+}
+.item-section.blue .jj  .pack-name {
+    color: #2196f3;
+}
+.item-section.blue .jj  .pack-jj {
+    color: #2196f3;
+}
+.item-section.blue .now-btn {
+    background-image: url("../images/btn_04.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.item-section.blue .title-h4 {
+    color: #2196f3;
+}
+.item-section.blue .pack-name .solid {
+    background-color: #2196f3;
+}
+.item-section.blue .tag {
+    background-color: #2196f3;
+}
+
+.item-section.orange .md {
+    background-color: #ff9800;
+}
+.item-section.orange .jj {
+    background-color: #fff3e0;
+}
+.item-section.orange .jj  .pack-name {
+    color: #ff9800;
+}
+.item-section.orange .jj  .pack-jj {
+    color: #ff9800;
+}
+.item-section.orange .now-btn {
+    background-image: url("../images/btn_03.png");
+}
+.item-section.orange .title-h4 {
+    color: #ff9800;
+}
+.item-section.orange .pack-name .solid {
+    background-color: #ff9800;
+}
+.item-section.orange .tag {
+    background-color: #ff9800;
+}
+
+
+.item-section.green .md {
+    background-color: #4caf50;
+}
+.item-section.green .jj {
+    background-color: #e8f5e9;
+}
+.item-section.green .jj  .pack-name {
+    color: #4caf50;
+}
+.item-section.green .jj  .pack-jj {
+    color: #4caf50;
+}
+.item-section.green .now-btn {
+    background-image: url("../images/btn_05.png");
+}
+.item-section.green .title-h4 {
+    color: #4caf50;
+}
+.item-section.green .pack-name .solid {
+    background-color: #4caf50;
+}
+.item-section.green .tag {
+    background-color: #4caf50;
+}
+
+.item-section.red .md {
+    background-color: #f44336;
+}
+.item-section.red .jj {
+    background-color: #ffebee;
+}
+.item-section.red .jj  .pack-name {
+    color: #f44336;
+}
+.item-section.red .jj  .pack-jj {
+    color: #f44336;
+}
+.item-section.red .now-btn {
+    background-image: url("../images/btn_01.png");
+}
+.item-section.red .title-h4 {
+    color: #f44336;
+}
+.item-section.red .pack-name .solid {
+    background-color: #f44336;
+}
+.item-section.red .tag {
+    background-color: #f44336;
+}
+
+.item-section.sea .md {
+    background-color: #00bcd4;
+}
+.item-section.sea .jj {
+    background-color: #e0f7fa;
+}
+.item-section.sea .jj  .pack-name {
+    color: #00bcd4;
+}
+.item-section.sea .jj  .pack-jj {
+    color: #00bcd4;
+}
+.item-section.sea .now-btn {
+    background-image: url("../images/btn_02.png");
+}
+.item-section.sea .title-h4 {
+    color: #00bcd4;
+}
+.item-section.sea .pack-name .solid {
+    background-color: #00bcd4;
+}
+.item-section.sea .tag {
+    background-color: #00bcd4;
+}
+
+.item-section.gj li {
+    height: 1.8rem;
+    background-image: url("../images/img_01.jpg");
+    background-position: top left;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.item-section.gj li.c-one {
+    background-image: url("../images/img_01.jpg");
+    background-position: top left;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.item-section.gj li.c-two {
+    background-image: url("../images/img_02.jpg");
+    background-position: top left;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.item-section.gj li.c-three {
+    background-image: url("../images/img_03.jpg");
+    background-position: top left;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.item-section.gj li.c-four {
+    background-image: url("../images/img_04.jpg");
+    background-position: top left;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.item-section.gj .now-btn {
+    background-image: url("../images/btn_04.png");
+    background-position: top left;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.item-section.gj li a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.item-section.gj li .bg-box {
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    padding: 3px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.bg-box .gj-name {
+    font-size: 0.22rem;
+    color: #fff;
+}
+.bg-box .gj-price {
+    font-size: 0.20rem;
+    color: #fff;
+    margin: 3px 0;
+}
+.bg-box .gj-tip {
+    font-size: 0.18rem;
+    color: #f00;
+}
+.header .swiper-container {
+    width: 100%;
+    height: 3.25rem;
+}
+.header .swiper-container a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.header .swiper-container a img {
+    display: block;
+    width: 100%;
+
+}
+.header .swiper-slide {
+    width: 6.5rem !important;
+
+}
+.count-day {
+    color: #f00;
+}
