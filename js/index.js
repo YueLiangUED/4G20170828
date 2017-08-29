@@ -18,16 +18,16 @@ $(document).ready(function(){
     $('.view-wrap .content').height(wraaperH - headerH - calendarH -hearerInfH);
 
     // 页面滚动判断
-    $('.view-wrap').on('scroll', function () {
-        var offsetTop= $('.hearer-inf').offset().top;
-        if (offsetTop <= 0) {
-            $('.siderbar').css('overflow-y','scroll');
-            $('.content-body').css('overflow-y','scroll');
-        } else {
-            $('.siderbar').css('overflow-y','hidden');
-            $('.content-body').css('overflow-y','hidden');
-        }
-    });
+    // $('.view-wrap').on('scroll', function () {
+    //     var offsetTop= $('.hearer-inf').offset().top;
+    //     if (offsetTop <= 0) {
+    //         $('.siderbar').css('overflow-y','scroll');
+    //         $('.content-body').css('overflow-y','scroll');
+    //     } else {
+    //         $('.siderbar').css('overflow-y','hidden');
+    //         $('.content-body').css('overflow-y','hidden');
+    //     }
+    // });
     // siderbar点击事件
     $('.siderbar li').on('tap', function () {
         var thisIndex = $(this).index();
