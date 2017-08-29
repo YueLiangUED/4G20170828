@@ -62,8 +62,8 @@ $(document).ready(function(){
         centeredSlides: true,
         coverflow: {
             rotate: 0,
-            stretch: -15,
-            depth: 80,
+            stretch: -6,
+            depth: 0,
             modifier: 2,
             slideShadows : false
         }
