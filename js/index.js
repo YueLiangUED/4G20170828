@@ -21,10 +21,6 @@ $(document).ready(function(){
     var viewScroll, siderbarScroll, contentScroll;
     
     
-    // // 整体滚动
-    // viewScroll = new IScroll('.view-wrap', {
-    //     bounce: false
-    // });
     siderbarScroll = new IScroll('.siderbar', {
         bounce: false,
         click: true
@@ -35,36 +31,45 @@ $(document).ready(function(){
         click: true
         // scrollY: false
     });
-    // contentScroll.on('scrollStart', function () {
-    //     if (contentScroll.y == 0) {
-    //         $('.wrapper').css({
-    //             'transform': 'translate(0,-' + headerH + 'px)'
-    //         }) 
-    //     }
-    // });
 
-    siderbarScroll.on('scrollEnd', function () {
-        var top = siderbarScroll.y
-        if (top == 0) {
+    var contentBodyTop;
+    $('.content-body').on('touchstart', function () {
+        contentBodyTop = contentScroll.y;
+    });
+    $('.content-body').swipeDown(function () {
+        if (contentBodyTop == 0) {
             $('.wrapper').css({
                 'transform': 'translate(0,0px)'
             })
         }
         
     });
-    contentScroll.on('scrollEnd', function () {
-        var top = contentScroll.y
-        if (top == 0) {
+
+    var siderbarScrollTop;
+    $('.siderbar').on('touchstart', function () {
+        siderbarScrollTop = siderbarScroll.y;
+    });
+    $('.siderbar').swipeDown(function () {
+        if (siderbarScrollTop == 0) {
             $('.wrapper').css({
                 'transform': 'translate(0,0px)'
             })
         }
         
     });
+    
+    
     $('body').swipeUp(function () {
-        $('.wrapper').css({
-                        'transform': 'translate(0,-' + headerH + 'px)'
-                    }) 
+            var translateY = $('.wrapper').attr('data-translateY');
+            if (translateY) {
+                console.log(translateY)
+            }
+            $('.wrapper').attr('data-translateY',headerH);
+            $('.wrapper').css({
+                'transform': 'translate(0,-' + headerH + 'px)'
+            }) 
+        
+        
     });
     // siderbar点击事件
     $('.siderbar li').on('tap', function () {
