@@ -27,14 +27,12 @@ $(document).ready(function(){
     // });
     siderbarScroll = new IScroll('.siderbar', {
         bounce: false,
-        click: true,
-        tap: true
+        click: true
         // scrollY: false
     });
     contentScroll = new IScroll('.content-body', {
         bounce: false,
         click: true
-        tap: true
         // scrollY: false
     });
     // contentScroll.on('scrollStart', function () {
@@ -68,7 +66,6 @@ $(document).ready(function(){
                         'transform': 'translate(0,-' + headerH + 'px)'
                     }) 
     });
-
     // siderbar点击事件
     $('.siderbar li').on('tap', function () {
         setTimeout(function () {
