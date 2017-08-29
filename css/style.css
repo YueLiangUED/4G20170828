@@ -12,13 +12,17 @@ body {
 }
 /* 页面布局 */
 .view-wrap {
+    position: relative;
     width: 100%;
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
 }
 .wrapper {
     overflow: hidden;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
 }
 /* header部分 */
 .header {
@@ -81,14 +85,14 @@ body {
     background-color: #fff;
     box-shadow: 5px 0 10px -5px rgba(153, 153, 153, .5);
     z-index: 10;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
 .content-body {
     width: 80%;
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
@@ -207,7 +211,7 @@ body {
     height: 0.28rem;
     color: #fff;
     border-radius: 0 0.1rem 0 0.1rem;
-    background-color: #f00;
+    background-color: #f44336;
     font-size: 0.20rem;
     text-align: center;
     line-height: 0.28rem;
@@ -234,6 +238,9 @@ body {
 }
 .pack-name {
     font-size: 0.32rem;
+}
+.pack-name .font-28 {
+    font-size: 0.28rem;
 }
 .pack-jj {
     margin-top: 0.1rem;
@@ -298,8 +305,8 @@ body {
 .item-section.blue .pack-name .solid {
     background-color: #2196f3;
 }
-.item-section.blue .tag {
-    background-color: #2196f3;
+.item-section .tag {
+    background-color: #f44336;
 }
 
 .item-section.orange .md {
@@ -323,8 +330,8 @@ body {
 .item-section.orange .pack-name .solid {
     background-color: #ff9800;
 }
-.item-section.orange .tag {
-    background-color: #ff9800;
+.item-section .tag {
+    background-color: #f44336;
 }
 
 
@@ -350,7 +357,7 @@ body {
     background-color: #4caf50;
 }
 .item-section.green .tag {
-    background-color: #4caf50;
+    background-color: #f44336;
 }
 
 .item-section.red .md {
@@ -400,7 +407,7 @@ body {
     background-color: #00bcd4;
 }
 .item-section.sea .tag {
-    background-color: #00bcd4;
+    background-color: #f44336;
 }
 
 .item-section.gj li {

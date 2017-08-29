@@ -17,19 +17,63 @@ $(document).ready(function(){
     var wraaperH = $('.wrapper').height();
     $('.view-wrap .content').height(wraaperH - headerH - calendarH -hearerInfH);
 
-    // 页面滚动判断
-    // $('.view-wrap').on('scroll', function () {
-    //     var offsetTop= $('.hearer-inf').offset().top;
-    //     if (offsetTop <= 0) {
-    //         $('.siderbar').css('overflow-y','scroll');
-    //         $('.content-body').css('overflow-y','scroll');
-    //     } else {
-    //         $('.siderbar').css('overflow-y','hidden');
-    //         $('.content-body').css('overflow-y','hidden');
+    // 自定义滚动
+    var viewScroll, siderbarScroll, contentScroll;
+    
+    
+    // // 整体滚动
+    // viewScroll = new IScroll('.view-wrap', {
+    //     bounce: false
+    // });
+    siderbarScroll = new IScroll('.siderbar', {
+        bounce: false,
+        click: true,
+        tap: true
+        // scrollY: false
+    });
+    contentScroll = new IScroll('.content-body', {
+        bounce: false,
+        click: true
+        tap: true
+        // scrollY: false
+    });
+    // contentScroll.on('scrollStart', function () {
+    //     if (contentScroll.y == 0) {
+    //         $('.wrapper').css({
+    //             'transform': 'translate(0,-' + headerH + 'px)'
+    //         }) 
     //     }
     // });
+
+    siderbarScroll.on('scrollEnd', function () {
+        var top = siderbarScroll.y
+        if (top == 0) {
+            $('.wrapper').css({
+                'transform': 'translate(0,0px)'
+            })
+        }
+        
+    });
+    contentScroll.on('scrollEnd', function () {
+        var top = contentScroll.y
+        if (top == 0) {
+            $('.wrapper').css({
+                'transform': 'translate(0,0px)'
+            })
+        }
+        
+    });
+    $('body').swipeUp(function () {
+        $('.wrapper').css({
+                        'transform': 'translate(0,-' + headerH + 'px)'
+                    }) 
+    });
+
     // siderbar点击事件
     $('.siderbar li').on('tap', function () {
+        setTimeout(function () {
+            contentScroll.refresh();
+        },0);
         var thisIndex = $(this).index();
         $('.siderbar li').removeClass('act');
         $(this).addClass('act');
@@ -37,6 +81,7 @@ $(document).ready(function(){
         var thisContent = $('.content-item')[thisIndex];
         $(thisContent).show();
     });
+
     // 获取月份时间
     var nowDate = new Date();
     var nowMonth = nowDate.getMonth() + 1;
